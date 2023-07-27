@@ -7,17 +7,18 @@ import commentRoutes from "./routes/comments.js";
 import authRoutes from "./routes/auth.js";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
-const cors = require("cors");
+const cors = require('cors');
 
 
 const app = express();
 dotenv.config()
 app.use(bodyParser.json()); 
 
-corsOption = {
-  origin:[ "*"],
-}
+app.use(cors());
 
+const corsOptions = {
+  origin: 'https://video-streaming-client.vercel.app'
+};
 
 app.use(cors(corsOption));
 
