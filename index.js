@@ -11,14 +11,16 @@ const cors = require('cors');
 
 
 const app = express();
+
+app.use(cors({
+  origin: '*'
+}));
+
 dotenv.config()
 app.use(bodyParser.json()); 
 
 
 
-app.use(cors({
-  origin: '*'
-}));
 
 const connect = () => {
     mongoose
