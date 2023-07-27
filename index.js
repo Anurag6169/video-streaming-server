@@ -6,18 +6,20 @@ import videoRoutes from "./routes/videos.js";
 import commentRoutes from "./routes/comments.js";
 import authRoutes from "./routes/auth.js";
 import cookieParser from "cookie-parser";
-import cors from "cors"
 import bodyParser from "body-parser";
-
+const cors = require("cors");
 
 
 const app = express();
 dotenv.config()
 app.use(bodyParser.json()); 
 
-app.use(cors({
-    origin:'*'
-}))
+corsOption = {
+  origin: [
+    "http://127.0.0.1:3000",
+    "https://video-streaming-client.vercel.app"
+  ]
+}
 // app.use((req, res, next) => {
 //   res.setHeader("Access-Control-Allow-Origin", "*");
 //   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
