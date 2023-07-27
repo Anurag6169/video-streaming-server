@@ -15,7 +15,7 @@ dotenv.config()
 app.use(bodyParser.json()); 
 
 corsOption = {
-  origin: "*"
+  origin:[ "*"],
 }
 
 
