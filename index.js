@@ -15,10 +15,7 @@ dotenv.config()
 app.use(bodyParser.json()); 
 
 corsOption = {
-  origin: [
-    "http://127.0.0.1:3000",
-    "https://video-streaming-client.vercel.app"
-  ]
+  origin: "*"
 }
 // app.use((req, res, next) => {
 //   res.setHeader("Access-Control-Allow-Origin", "*");
