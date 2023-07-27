@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const corsOptions = {
-  origin: 'https://video-streaming-client.vercel.app'
+  origin: '*'
 };
 
 app.use(cors(corsOption));
